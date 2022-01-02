@@ -5,7 +5,7 @@
     if( !isset($_SESSION['email']) || ($_SESSION['email']!='hahieu@gmail.com' && $_SESSION['pass']!='12345')){
 ?>
 <html>
-    <head><title>Vietpro Shop</title>
+    <head><title>Open Mobile Shop</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
         <script src="js/jquery-3.1.1.min.js"></script>
