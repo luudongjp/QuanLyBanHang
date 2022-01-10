@@ -2,7 +2,7 @@
     ob_start();
     session_start();
     include_once './cauhinh/ketnoi.php';
-    if( !isset($_SESSION['email']) || ($_SESSION['email']!='hahieu@gmail.com' && $_SESSION['pass']!='12345')){
+    
 ?>
 <html>
     <head><title>Open Mobile Shop</title>
@@ -150,9 +150,3 @@
         </div>
     </body>
 </html>
-<?php  
-    }
-    else{
-        header('location: ./quantri/quantri.php');
-    }
-?>
