@@ -72,7 +72,7 @@
             <div class="panel-heading">Giới thiệu</div>
             <div class="panel-body">
                 <div class="canvas-wrapper">
-                    <p>Đây là hệ thống quản trị của website Thương mại điện tử do nhóm ABC</p>
+                    <p>Đây là hệ thống quản trị của website Thương mại điện tử do nhóm 20 - Phần mềm Mã Nguồn Mở</p>
                     <br/>
                     <p>Hệ thống quản trị này có các chức năng quản lý sau: <br/>
                         - Quản lý Thành viên 

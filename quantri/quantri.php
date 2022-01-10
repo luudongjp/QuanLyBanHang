@@ -2,7 +2,7 @@
     ob_start();
     session_start();
     include_once'./ketnoi.php';
-    if ($_SESSION['email']=='hahieu@gmail.com' && $_SESSION['pass']=='12345') {
+   
 ?>
 <!DOCTYPE html>
 <html>
@@ -205,10 +205,3 @@
     </body>
 
 </html>
-<?php  
-    }
-    else{
-        //header('location: index.php');
-        header('location: ../index.php');
-    }
-?>
