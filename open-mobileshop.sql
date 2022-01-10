@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 11, 2018 lúc 07:42 AM
--- Phiên bản máy phục vụ: 10.1.26-MariaDB
--- Phiên bản PHP: 7.1.9
+-- Host: 127.0.0.1
+-- Generation Time: Jan 10, 2022 at 01:46 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.4.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,10 +17,14 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
+--
+-- Database: `open-mobileshop`
+--
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `blsanpham`
+-- Table structure for table `blsanpham`
 --
 
 CREATE TABLE `blsanpham` (
@@ -34,7 +37,7 @@ CREATE TABLE `blsanpham` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `blsanpham`
+-- Dumping data for table `blsanpham`
 --
 
 INSERT INTO `blsanpham` (`id_bl`, `id_sp`, `ten`, `dien_thoai`, `binh_luan`, `ngay_gio`) VALUES
@@ -57,7 +60,7 @@ INSERT INTO `blsanpham` (`id_bl`, `id_sp`, `ten`, `dien_thoai`, `binh_luan`, `ng
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `dmsanpham`
+-- Table structure for table `dmsanpham`
 --
 
 CREATE TABLE `dmsanpham` (
@@ -66,7 +69,7 @@ CREATE TABLE `dmsanpham` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `dmsanpham`
+-- Dumping data for table `dmsanpham`
 --
 
 INSERT INTO `dmsanpham` (`id_dm`, `ten_dm`) VALUES
@@ -89,7 +92,7 @@ INSERT INTO `dmsanpham` (`id_dm`, `ten_dm`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `quangcao`
+-- Table structure for table `quangcao`
 --
 
 CREATE TABLE `quangcao` (
@@ -99,17 +102,17 @@ CREATE TABLE `quangcao` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `quangcao`
+-- Dumping data for table `quangcao`
 --
 
 INSERT INTO `quangcao` (`id_quangcao`, `id_thue`, `ten_anh`) VALUES
-(1, 3, 'quangcao1.png'),
-(6, 3, 'quangcao2.png');
+(1, 3, 'quangcao1'),
+(6, 3, 'test 2');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sanpham`
+-- Table structure for table `sanpham`
 --
 
 CREATE TABLE `sanpham` (
@@ -128,7 +131,7 @@ CREATE TABLE `sanpham` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `sanpham`
+-- Dumping data for table `sanpham`
 --
 
 INSERT INTO `sanpham` (`id_sp`, `id_dm`, `ten_sp`, `anh_sp`, `gia_sp`, `bao_hanh`, `phu_kien`, `tinh_trang`, `khuyen_mai`, `trang_thai`, `dac_biet`, `chi_tiet_sp`) VALUES
@@ -165,7 +168,7 @@ INSERT INTO `sanpham` (`id_sp`, `id_dm`, `ten_sp`, `anh_sp`, `gia_sp`, `bao_hanh
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `thanhvien`
+-- Table structure for table `thanhvien`
 --
 
 CREATE TABLE `thanhvien` (
@@ -176,86 +179,84 @@ CREATE TABLE `thanhvien` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `thanhvien`
+-- Dumping data for table `thanhvien`
 --
 
 INSERT INTO `thanhvien` (`id_thanhvien`, `email`, `mat_khau`, `quyen_truy_cap`) VALUES
-(1, 'vietpro.edu.vn@gmail.com', 'vietpro.edu.vn', 2),
 (2, 'sirtuanhoang@gmail.com', 'sirtuanhoang', 1),
 (3, 'tuanhoang@gmail.com', 'tuanhoang', 1),
-(5, 'buixuanque8297@gmail.com', '12345', 2),
 (9, 'qoetbui@gmail.com', '1234', 1),
 (15, 'admin@gmail.com', '123', 1),
-(16, 'hahieu@gmail.com', '12345', 2);
+(17, 'buixuanque8297@gmail.com', '12345', 2);
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `blsanpham`
+-- Indexes for table `blsanpham`
 --
 ALTER TABLE `blsanpham`
   ADD PRIMARY KEY (`id_bl`);
 
 --
--- Chỉ mục cho bảng `dmsanpham`
+-- Indexes for table `dmsanpham`
 --
 ALTER TABLE `dmsanpham`
   ADD PRIMARY KEY (`id_dm`);
 
 --
--- Chỉ mục cho bảng `quangcao`
+-- Indexes for table `quangcao`
 --
 ALTER TABLE `quangcao`
   ADD PRIMARY KEY (`id_quangcao`);
 
 --
--- Chỉ mục cho bảng `sanpham`
+-- Indexes for table `sanpham`
 --
 ALTER TABLE `sanpham`
   ADD PRIMARY KEY (`id_sp`),
   ADD KEY `id_dm` (`id_dm`);
 
 --
--- Chỉ mục cho bảng `thanhvien`
+-- Indexes for table `thanhvien`
 --
 ALTER TABLE `thanhvien`
   ADD PRIMARY KEY (`id_thanhvien`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `blsanpham`
+-- AUTO_INCREMENT for table `blsanpham`
 --
 ALTER TABLE `blsanpham`
   MODIFY `id_bl` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT cho bảng `dmsanpham`
+-- AUTO_INCREMENT for table `dmsanpham`
 --
 ALTER TABLE `dmsanpham`
   MODIFY `id_dm` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT cho bảng `quangcao`
+-- AUTO_INCREMENT for table `quangcao`
 --
 ALTER TABLE `quangcao`
-  MODIFY `id_quangcao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_quangcao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT cho bảng `sanpham`
+-- AUTO_INCREMENT for table `sanpham`
 --
 ALTER TABLE `sanpham`
   MODIFY `id_sp` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
--- AUTO_INCREMENT cho bảng `thanhvien`
+-- AUTO_INCREMENT for table `thanhvien`
 --
 ALTER TABLE `thanhvien`
-  MODIFY `id_thanhvien` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_thanhvien` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
