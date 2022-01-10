@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 10, 2022 at 01:46 PM
+-- Generation Time: Jan 10, 2022 at 01:58 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.25
 
@@ -186,7 +186,7 @@ INSERT INTO `thanhvien` (`id_thanhvien`, `email`, `mat_khau`, `quyen_truy_cap`) 
 (2, 'sirtuanhoang@gmail.com', 'sirtuanhoang', 1),
 (3, 'tuanhoang@gmail.com', 'tuanhoang', 1),
 (9, 'qoetbui@gmail.com', '1234', 1),
-(15, 'admin@gmail.com', '123', 1),
+(15, 'admin@gmail.com', '12345', 2),
 (17, 'buixuanque8297@gmail.com', '12345', 2);
 
 --

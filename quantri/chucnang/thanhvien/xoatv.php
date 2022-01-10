@@ -1,6 +1,6 @@
 <?php  
 	session_start();
-	if($_SESSION['email']=='buixuanque8297@gmail.com' && $_SESSION['pass']=='12345'){
+	if($_SESSION['email']=='admin@gmail.com' && $_SESSION['pass']=='12345'){
 		$id_thanhvien=$_GET['id_thanhvien'];
 		include_once'../../ketnoi.php';
 		$sql="DELETE FROM thanhvien WHERE id_thanhvien='$id_thanhvien'";

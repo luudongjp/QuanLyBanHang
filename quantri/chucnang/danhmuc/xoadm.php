@@ -1,6 +1,6 @@
 <?php  
 	session_start();
-	if($_SESSION['email']=='buixuanque8297@gmail.com'&&$_SESSION['pass']=='12345'){
+	if($_SESSION['email']=='admin@gmail.com'&&$_SESSION['pass']=='12345'){
 		$id_dm = $_GET['id_dm'];
 		include_once '../../ketnoi.php';
 		$sql= "DELETE FROM dmsanpham WHERE id_dm='$id_dm'";
