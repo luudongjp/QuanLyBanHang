@@ -121,14 +121,14 @@
         $mailer->Port = 465; // cổng SMTP
 
         // Phải chỉnh sửa lại
-        $mailer->Username = "vietpro.edu.vn22@gmail.com"; // GMAIL username
-        $mailer->Password = "*vietpro.edu.vn22"; // GMAIL password
+        $mailer->Username = "luudongjp@gmail.com"; // GMAIL username
+        $mailer->Password = "Ld155216"; // GMAIL password
         $mailer->AddAddress($email, $ten); //email người nhận, $email và $ten là 2 biến đc gán bởi $_POST lấy từ trong form
-        $mailer->AddCC("vietpro.edu.vn22@gmail.com", "Admin Vietpro Shop"); // gửi thêm một email cho Admin
+        $mailer->AddCC("luudongjp@gmail.com", "Admin One_mobileshop"); // gửi thêm một email cho Admin
 
         // Chuẩn bị gửi thư nào
-        $mailer->FromName = 'Vietpro Shop'; // tên người gửi
-        $mailer->From = 'vietpro.edu.vn22@gmail.com'; // mail người gửi
+        $mailer->FromName = 'Luu Van Dong'; // tên người gửi
+        $mailer->From = 'luudongjp@gmail.com'; // mail người gửi
         $mailer->Subject = 'Hóa đơn xác nhận mua hàng từ Vietpro Shop';
         $mailer->IsHTML(TRUE); //Bật HTML không thích thì false
 
